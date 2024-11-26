@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <title>Pago Vendedor</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+            
+            //Variables
+            let nombres;
+            let ap_Paterno;
+            let ap_Materno;
+            let sueldo_Base;
+            let numero_Horas;
+            let total_Pagar = 0;
+            let pago_Normal = 0;
+            let pago_Doble = 0;
+            let pago_Triple = 0;
+            let horas_Triples = 0;
+            let horas_Dobles = 0;
+            let horas_Normales = 0;
+
+            //Solicitamos Datos
+            nombres = prompt("Escribe tu nombre o nombres");
+            ap_Paterno = prompt("Escribe tu apellido paterno");
+            ap_Materno = prompt("Escribe tu apellido materno");
+            sueldo_Base = parseFloat(prompt("Escribe tu sueldo base x hora (1230.50)"));
+            numero_Horas = parseInt(prompt("Escribe el número de horas trabajadas"));
+
+            //Calculamos el total a pagar
+            if(numero_Horas >= 48){
+                horas_Triples = numero_Horas - 47;
+                numero_Horas = numero_Horas - horas_Triples;
+                pago_Triple = ((horas_Triples) * (sueldo_Base * 3));
+            }
+            if(numero_Horas >= 41 || numero_Horas <= 47){
+                horas_Dobles = numero_Horas - 40;
+                numero_Horas = numero_Horas - horas_Dobles;
+                pago_Doble = ((horas_Dobles) * (sueldo_Base * 2));
+            }
+            if(numero_Horas >= 1 || numero_Horas <= 40){
+                horas_Normales = numero_Horas;
+                pago_Normal = (horas_Normales * sueldo_Base);
+            }
+            
+            numero_Horas = horas_Normales + horas_Dobles + horas_Triples;
+            total_Pagar = pago_Normal + pago_Doble + pago_Triple;
+
+            //Mostramos salida
+            document.write("Tu nombre completo es: " + nombres.toUpperCase() + " " + ap_Paterno.toUpperCase() + 
+                " " + ap_Materno.toUpperCase() + '</br>');
+            document.write("Sueldo base: $" + sueldo_Base.toFixed(2) + '</br>');
+            if(horas_Triples == 0){
+                document.write("Horas trabajadas: " + numero_Horas + " - (" + horas_Normales + " horas pago normal y " 
+                    + horas_Dobles + " horas pago doble)" + '</br>');
+            }else{
+                document.write("Horas trabajadas: " + numero_Horas + " - (" + horas_Normales + " horas pago normal, " 
+                    + horas_Dobles + " horas pago doble y " + horas_Triples + " horas pago triple)" + '</br>');
+            }
+            document.write("Total a pagar: $" + total_Pagar + '</br>')
+
+
+        </script>
+    </body>
+</html>

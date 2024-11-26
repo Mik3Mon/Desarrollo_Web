@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>Factorial</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+            
+            //Variable de control del ciclo
+            let ciclo = true;
+            let repetir = 0;
+
+            //Ciclo while
+            while(ciclo == true){
+                let num1 = parseInt(prompt("Escribe el número del cual deseas saber el factorial"));
+                let total = 1;
+                document.write(num1 + "! = ");
+                for(i=1; i<=num1; i++){
+                    total = total * i;
+                    if(i < num1){
+                        document.write(i + " * ");
+                    }else if(i == num1){
+                        document.write(i);
+                    }
+                }
+                document.write(" = " + total + '</br>');
+                document.write("-----------------------------------------------------------" + '</br>');
+
+                //Proceso para saber si desea hacer otra operación
+                repetir = prompt("¿Deseas hacer otra operación? (Escribe el número) \n 1. Si \n 2. No");
+                if(repetir == 1){
+                    ciclo = true;
+                }else if(repetir == 2){
+                    ciclo = false;
+                }else{
+                    let ciclo2 = true;
+                    while(ciclo2 == true){
+                        repetir = prompt("¿Deseas hacer otra operación? \n 1. Si \n 2. No");
+                        if(repetir == 1 || repetir == 2){
+                            ciclo2 = false;
+                        }else{
+                            ciclo2 = true;
+                        }
+                    }
+                }
+            }
+            
+            
+        </script>
+    </body>
+</html>

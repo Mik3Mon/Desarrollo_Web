@@ -1,0 +1,315 @@
+<html>
+    <head>
+        <title>Convertidor de Unidades</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+
+            //Variable de control del ciclo
+            let ciclo = true;
+
+            //Ciclo while
+            while(ciclo == true){
+                
+                //Variables
+                let operacion = 0;
+                let repetir = 0;
+                let unidad_Uno = prompt("Elige las unidades que deseas convertir: (Escribe el número) \n" 
+                    + " 1. Centimetros(cm) \n 2. Metros(m) \n 3. Kilmetros(km) \n"
+                         + " 4. Pulgada(in) \n 5. Pie(ft) \n 6. Yarda(yd) \n 7. Millas(mi)");
+                let unidad_Dos = 0;
+                let num1 = 0;
+
+                //Calculos conversión de unidades
+                switch(unidad_Uno){
+                    case "1":
+                        unidad_Dos = prompt("Elige las unidades a la que deseas convertir: (Escribe el número) \n" 
+                        + " 1. Centimetros(cm) \n 2. Metros(m) \n 3. Kilmetros(km) \n"
+                             + " 4. Pulgada(in) \n 5. Pie(ft) \n 6. Yarda(yd) \n 7. Millas(mi)");
+                        if(unidad_Dos == 1){
+                            num1 = parseInt(prompt("Escribe el valor de las unidades en cm"));
+                            document.write(num1 + "cm son " + num1 + "cm" + '</br>');
+                        }else if(unidad_Dos == 2){
+                            num1 = parseInt(prompt("Escribe el valor de las unidades en cm"));
+                            operacion = num1 / 100;
+                            document.write(num1 + "cm son " + operacion + "m" + '</br>');
+                        }else if(unidad_Dos == 3){
+                            num1 = parseInt(prompt("Escribe el valor de las unidades en cm"));
+                            operacion = num1 / 100000;
+                            document.write(num1 + "cm son " + operacion + "km" + '</br>');
+                        }else if(unidad_Dos == 4){
+                            num1 = parseInt(prompt("Escribe el valor de las unidades en cm"));
+                            operacion = num1 / 2.54;
+                            document.write(num1 + "cm son " + operacion + "in" + '</br>');
+                        }else if(unidad_Dos == 5){
+                            num1 = parseInt(prompt("Escribe el valor de las unidades en cm"));
+                            operacion = num1 / 30.48;
+                            document.write(num1 + "cm son " + operacion + "ft" + '</br>');
+                        }else if(unidad_Dos == 6){
+                            num1 = parseInt(prompt("Escribe el valor de las unidades en cm"));
+                            operacion = num1 / 91.40;
+                            document.write(num1 + "cm son " + operacion + "yd" + '</br>');
+                        }else if(unidad_Dos == 7){
+                            num1 = parseInt(prompt("Escribe el valor de las unidades en cm"));
+                            operacion = num1 / 160900;
+                            document.write(num1 + "cm son " + operacion + "mi" + '</br>');
+                        }else{
+                            unidad_Dos = prompt("Elige las unidades a la que deseas convertir: (Escribe el número) \n" 
+                                + " 1. Centimetros(cm) \n 2. Metros(m) \n 3. Kilmetros(km) \n"
+                                    + " 4. Pulgada(in) \n 5. Pie(ft) \n 6. Yarda(yd) \n 7. Millas(mi)");
+                        }
+                    break
+                
+                    case "2":
+                        unidad_Dos = prompt("Elige las unidades a la que deseas convertir: (Escribe el número) \n" 
+                            + " 1. Centimetros(cm) \n 2. Metros(m) \n 3. Kilmetros(km) \n"
+                                + " 4. Pulgada(in) \n 5. Pie(ft) \n 6. Yarda(yd) \n 7. Millas(mi)");
+                        if(unidad_Dos == 1){
+                            num1 = parseInt(prompt("Escribe el valor de las unidades en m"));
+                            operacion = num1 * 100;
+                            document.write(num1 + "m son " + operacion + "cm" + '</br>');
+                        }else if(unidad_Dos == 2){
+                            num1 = parseInt(prompt("Escribe el valor de las unidades en m"));
+                            document.write(num1 + "m son " + num1 + "m" + '</br>');
+                        }else if(unidad_Dos == 3){
+                            num1 = parseInt(prompt("Escribe el valor de las unidades en m"));
+                            operacion = num1 / 1000;
+                            document.write(num1 + "m son " + operacion + "km" + '</br>');
+                        }else if(unidad_Dos == 4){
+                            num1 = parseInt(prompt("Escribe el valor de las unidades en m"));
+                            operacion = num1 * 39.37;
+                            document.write(num1 + "m son " + operacion + "in" + '</br>');
+                        }else if(unidad_Dos == 5){
+                            num1 = parseInt(prompt("Escribe el valor de las unidades en m"));
+                            operacion = num1 * 3.281;
+                            document.write(num1 + "m son " + operacion + "ft" + '</br>');
+                        }else if(unidad_Dos == 6){
+                            num1 = parseInt(prompt("Escribe el valor de las unidades en m"));
+                            operacion = num1 * 1.094;
+                            document.write(num1 + "m son " + operacion + "yd" + '</br>');
+                        }else if(unidad_Dos == 7){
+                            num1 = parseInt(prompt("Escribe el valor de las unidades en m"));
+                            operacion = num1 / 1609;
+                            document.write(num1 + "m son " + operacion + "mi" + '</br>');
+                        }else{
+                            unidad_Dos = prompt("Elige las unidades a la que deseas convertir: (Escribe el número) \n" 
+                                + " 1. Centimetros(cm) \n 2. Metros(m) \n 3. Kilmetros(km) \n"
+                                    + " 4. Pulgada(in) \n 5. Pie(ft) \n 6. Yarda(yd) \n 7. Millas(mi)");
+                        }
+                    break
+
+                    case "3":
+                        unidad_Dos = prompt("Elige las unidades a la que deseas convertir: (Escribe el número) \n" 
+                            + " 1. Centimetros(cm) \n 2. Metros(m) \n 3. Kilmetros(km) \n"
+                                + " 4. Pulgada(in) \n 5. Pie(ft) \n 6. Yarda(yd) \n 7. Millas(mi)");
+                        if(unidad_Dos == 1){
+                            num1 = parseInt(prompt("Escribe el valor de las unidades en km"));
+                            operacion = num1 * 100000;
+                            document.write(num1 + "km son " + operacion + "cm" + '</br>');
+                        }else if(unidad_Dos == 2){
+                            num1 = parseInt(prompt("Escribe el valor de las unidades en km"));
+                            operacion = num1 * 1000;
+                            document.write(num1 + "km son " + operacion + "m" + '</br>');    
+                        }else if(unidad_Dos == 3){
+                            num1 = parseInt(prompt("Escribe el valor de las unidades en km"));
+                            document.write(num1 + "km son " + num1 + "km" + '</br>');    
+                        }else if(unidad_Dos == 4){
+                            num1 = parseInt(prompt("Escribe el valor de las unidades en km"));
+                            operacion = num1 * 39370;
+                            document.write(num1 + "km son " + operacion + "in" + '</br>');
+                        }else if(unidad_Dos == 5){
+                            num1 = parseInt(prompt("Escribe el valor de las unidades en km"));
+                            operacion = num1 * 3281;
+                            document.write(num1 + "km son " + operacion + "ft" + '</br>');
+                        }else if(unidad_Dos == 6){
+                            num1 = parseInt(prompt("Escribe el valor de las unidades en km"));
+                            operacion = num1 * 1094;
+                            document.write(num1 + "km son " + operacion + "yd" + '</br>');
+                        }else if(unidad_Dos == 7){
+                            num1 = parseInt(prompt("Escribe el valor de las unidades en km"));
+                            operacion = num1 / 1.609;
+                            document.write(num1 + "km son " + operacion + "mi" + '</br>');
+                        }else{
+                            unidad_Dos = prompt("Elige las unidades a la que deseas convertir: (Escribe el número) \n" 
+                                + " 1. Centimetros(cm) \n 2. Metros(m) \n 3. Kilmetros(km) \n"
+                                    + " 4. Pulgada(in) \n 5. Pie(ft) \n 6. Yarda(yd) \n 7. Millas(mi)");
+                        }
+                    break
+
+                    case "4":
+                        unidad_Dos = prompt("Elige las unidades a la que deseas convertir: (Escribe el número) \n" 
+                            + " 1. Centimetros(cm) \n 2. Metros(m) \n 3. Kilmetros(km) \n"
+                                + " 4. Pulgada(in) \n 5. Pie(ft) \n 6. Yarda(yd) \n 7. Millas(mi)");
+                        if(unidad_Dos == 1){
+                            num1 = parseInt(prompt("Escribe el valor de las unidades en in"));
+                            operacion = num1 * 2.54;
+                            document.write(num1 + "in son " + operacion + "cm" + '</br>');
+                        }else if(unidad_Dos == 2){
+                            num1 = parseInt(prompt("Escribe el valor de las unidades en in"));
+                            operacion = num1 / 39.97;
+                            document.write(num1 + "in son " + operacion + "m" + '</br>');    
+                        }else if(unidad_Dos == 3){
+                            num1 = parseInt(prompt("Escribe el valor de las unidades en in"));
+                            operacion = num1 / 39370;
+                            document.write(num1 + "in son " + operacion + "km" + '</br>');
+                        }else if(unidad_Dos == 4){
+                            num1 = parseInt(prompt("Escribe el valor de las unidades en in"));
+                            document.write(num1 + "in son " + num1 + "in" + '</br>');
+                        }else if(unidad_Dos == 5){
+                            num1 = parseInt(prompt("Escribe el valor de las unidades en km"));
+                            operacion = num1 / 12;
+                            document.write(num1 + "in son " + operacion + "ft" + '</br>');
+                        }else if(unidad_Dos == 6){
+                            num1 = parseInt(prompt("Escribe el valor de las unidades en km"));
+                            operacion = num1 / 36;
+                            document.write(num1 + "in son " + operacion + "yd" + '</br>');
+                        }else if(unidad_Dos == 7){
+                            num1 = parseInt(prompt("Escribe el valor de las unidades en km"));
+                            operacion = num1 / 63360;
+                            document.write(num1 + "in son " + operacion + "mi" + '</br>');
+                        }else{
+                            unidad_Dos = prompt("Elige las unidades a la que deseas convertir: (Escribe el número) \n" 
+                                + " 1. Centimetros(cm) \n 2. Metros(m) \n 3. Kilmetros(km) \n"
+                                    + " 4. Pulgada(in) \n 5. Pie(ft) \n 6. Yarda(yd) \n 7. Millas(mi)");
+                        }
+                    break
+
+                    case "5":
+                        unidad_Dos = prompt("Elige las unidades a la que deseas convertir: (Escribe el número) \n" 
+                            + " 1. Centimetros(cm) \n 2. Metros(m) \n 3. Kilmetros(km) \n"
+                                + " 4. Pulgada(in) \n 5. Pie(ft) \n 6. Yarda(yd) \n 7. Millas(mi)");
+                        if(unidad_Dos == 1){
+                            num1 = parseInt(prompt("Escribe el valor de las unidades en ft"));
+                            operacion = num1 * 30.48;
+                            document.write(num1 + "ft son " + operacion + "cm" + '</br>');
+                        }else if(unidad_Dos == 2){
+                            num1 = parseInt(prompt("Escribe el valor de las unidades en ft"));
+                            operacion = num1 / 3.281;
+                            document.write(num1 + "ft son " + operacion + "m" + '</br>');
+                        }else if(unidad_Dos == 3){
+                            num1 = parseInt(prompt("Escribe el valor de las unidades en ft"));
+                            operacion = num1 / 3281;
+                            document.write(num1 + "ft son " + operacion + "km" + '</br>');
+                        }else if(unidad_Dos == 4){
+                            num1 = parseInt(prompt("Escribe el valor de las unidades en ft"));
+                            operacion = num1 * 12;
+                            document.write(num1 + "ft son " + operacion + "in" + '</br>');
+                        }else if(unidad_Dos == 5){
+                            num1 = parseInt(prompt("Escribe el valor de las unidades en ft"));
+                            document.write(num1 + "ft son " + num1 + "ft" + '</br>');
+                        }else if(unidad_Dos == 6){
+                            num1 = parseInt(prompt("Escribe el valor de las unidades en ft"));
+                            operacion = num1 / 3;
+                            document.write(num1 + "ft son " + operacion + "yd" + '</br>');
+                        }else if(unidad_Dos == 7){
+                            num1 = parseInt(prompt("Escribe el valor de las unidades en ft"));
+                            operacion = num1 / 5280;
+                            document.write(num1 + "ft son " + operacion + "mi" + '</br>');
+                        }else{
+                            unidad_Dos = prompt("Elige las unidades a la que deseas convertir: (Escribe el número) \n" 
+                                + " 1. Centimetros(cm) \n 2. Metros(m) \n 3. Kilmetros(km) \n"
+                                    + " 4. Pulgada(in) \n 5. Pie(ft) \n 6. Yarda(yd) \n 7. Millas(mi)");
+                        }
+                    break
+
+                    case "6":
+                        unidad_Dos = prompt("Elige las unidades a la que deseas convertir: (Escribe el número) \n" 
+                            + " 1. Centimetros(cm) \n 2. Metros(m) \n 3. Kilmetros(km) \n"
+                                + " 4. Pulgada(in) \n 5. Pie(ft) \n 6. Yarda(yd) \n 7. Millas(mi)");
+                        if(unidad_Dos == 1){
+                            num1 = parseInt(prompt("Escribe el valor de las unidades en yd"));
+                            operacion = num1 * 91.40;
+                            document.write(num1 + "yd son " + operacion + "cm" + '</br>');
+                        }else if(unidad_Dos == 2){
+                            num1 = parseInt(prompt("Escribe el valor de las unidades en yd"));
+                            operacion = num1 / 1.094;
+                            document.write(num1 + "yd son " + operacion + "m" + '</br>');    
+                        }else if(unidad_Dos == 3){
+                            num1 = parseInt(prompt("Escribe el valor de las unidades en yd"));
+                            operacion = num1 / 1094;
+                            document.write(num1 + "yd son " + operacion + "km" + '</br>');
+                        }else if(unidad_Dos == 4){
+                            num1 = parseInt(prompt("Escribe el valor de las unidades en yd"));
+                            operacion = num1 * 36;
+                            document.write(num1 + "yd son " + operacion + "in" + '</br>');
+                        }else if(unidad_Dos == 5){
+                            num1 = parseInt(prompt("Escribe el valor de las unidades en yd"));
+                            operacion = num1 * 3;
+                            document.write(num1 + "yd son " + operacion + "ft" + '</br>');
+                        }else if(unidad_Dos == 6){
+                            num1 = parseInt(prompt("Escribe el valor de las unidades en yd"));
+                            document.write(num1 + "yd son " + num1 + "yd" + '</br>');
+                        }else if(unidad_Dos == 7){
+                            num1 = parseInt(prompt("Escribe el valor de las unidades en yd"));
+                            operacion = num1 / 1760;
+                            document.write(num1 + "yd son " + operacion + "mi" + '</br>');
+                        }else{
+                            unidad_Dos = prompt("Elige las unidades a la que deseas convertir: (Escribe el número) \n" 
+                                + " 1. Centimetros(cm) \n 2. Metros(m) \n 3. Kilmetros(km) \n"
+                                    + " 4. Pulgada(in) \n 5. Pie(ft) \n 6. Yarda(yd) \n 7. Millas(mi)");
+                        }
+                    break
+
+                    case "7":
+                        unidad_Dos = prompt("Elige las unidades a la que deseas convertir: (Escribe el número) \n" 
+                            + " 1. Centimetros(cm) \n 2. Metros(m) \n 3. Kilmetros(km) \n"
+                                + " 4. Pulgada(in) \n 5. Pie(ft) \n 6. Yarda(yd) \n 7. Millas(mi)");
+                        if(unidad_Dos == 1){
+                            num1 = parseInt(prompt("Escribe el valor de las unidades en mi"));
+                            operacion = num1 * 160900;
+                            document.write(num1 + "mi son " + operacion + "cm" + '</br>');
+                        }else if(unidad_Dos == 2){
+                            num1 = parseInt(prompt("Escribe el valor de las unidades en mi"));
+                            operacion = num1 * 1609;
+                            document.write(num1 + "mi son " + operacion + "m" + '</br>');    
+                        }else if(unidad_Dos == 3){
+                            num1 = parseInt(prompt("Escribe el valor de las unidades en mi"));
+                            operacion = num1 * 1.609;
+                            document.write(num1 + "mi son " + operacion + "km" + '</br>');
+                        }else if(unidad_Dos == 4){
+                            num1 = parseInt(prompt("Escribe el valor de las unidades en mi"));
+                            operacion = num1 * 63360;
+                            document.write(num1 + "mi son " + operacion + "in" + '</br>');
+                        }else if(unidad_Dos == 5){
+                            num1 = parseInt(prompt("Escribe el valor de las unidades en mi"));
+                            operacion = num1 * 5280;
+                            document.write(num1 + "mi son " + operacion + "ft" + '</br>');
+                        }else if(unidad_Dos == 6){
+                            num1 = parseInt(prompt("Escribe el valor de las unidades en mi"));
+                            operacion = num1 * 1760;
+                            document.write(num1 + "mi son " + operacion + "yd" + '</br>');
+                        }else if(unidad_Dos == 7){
+                            num1 = parseInt(prompt("Escribe el valor de las unidades en mi"));
+                            document.write(num1 + "mi son " + num1 + "mi" + '</br>');
+                        }else{
+                            unidad_Dos = prompt("Elige las unidades a la que deseas convertir: (Escribe el número) \n" 
+                                + " 1. Centimetros(cm) \n 2. Metros(m) \n 3. Kilmetros(km) \n"
+                                    + " 4. Pulgada(in) \n 5. Pie(ft) \n 6. Yarda(yd) \n 7. Millas(mi)");
+                        }
+                    break
+                }
+                
+                document.write("-----------------------------------------------------------" + '</br>');
+
+                //Proceso para saber si desea hacer otra conversión
+                repetir = prompt("¿Deseas hacer otra conversión? (Escribe el número) \n 1. Si \n 2. No");
+                if(repetir == 1){
+                    ciclo = true;
+                }else if(repetir == 2){
+                    ciclo = false;
+                }else{
+                    let ciclo2 = true;
+                    while(ciclo2 == true){
+                        repetir = prompt("¿Deseas hacer otra conversión? (Escribe el número) \n 1. Si \n 2. No");
+                        if(repetir == 1 || repetir == 2){
+                            ciclo2 = false;
+                        }else{
+                            ciclo2 = true;
+                        }
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>

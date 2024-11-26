@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <title>Rango de Tablas</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+            
+            //Triangulo invertido
+            for(i=1; i<=5; i++){
+                for(k=4; k>=i; k--){
+                    document.write(" &nbsp" + "&nbsp");
+                }
+                for(j=1; j<=i; j++){
+                    document.write(" $ ");
+                }
+                document.write('</br>');
+            }
+
+            document.write('</br>');
+
+            //Piramide
+            for(i=1; i<=5; i++){
+                for(j=1; j<=i; j++){
+                    document.write(" $ ");
+                }
+                document.write('</br>');
+            }
+            for(i=1; i<=4; i++){
+                for(j=4; j>=i; j--){
+                    document.write(" $ ");
+                }
+                document.write('</br>');
+            }
+
+            document.write('</br>');
+
+            //Medio árbol
+            for(i=1; i<=5; i++){
+                for(j=1; j<=i; j++){
+                    document.write(" $ ");
+                }
+                document.write('</br>');
+                for(j=0; j<=i; j++){
+                    document.write(" $ ");
+                }
+                document.write('</br>');
+                for(j=-1; j<=i; j++){
+                    document.write(" $ ");
+                }
+                document.write('</br>');
+                for(j=-2; j<=i; j++){
+                    document.write(" $ ");
+                }
+                document.write('</br>');
+            }
+        </script>
+    </body>
+</html>

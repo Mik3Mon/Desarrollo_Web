@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <title>Calculadora</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+
+            //Variable de control ciclo while
+            let ciclo = true;
+
+            //Ciclo while
+            while(ciclo == true){
+                
+                //Variables
+                let operacion = 0;
+                let repetir = 0;
+                let opcion = prompt("Elige una operación: (Escribe el número) \n 1. Suma \n 2. Resta \n" 
+                    + " 3. Multiplicación \n 4. División");
+                let num1 = parseFloat(prompt("Escribe el valor del primer termino"));
+                let num2 = parseFloat(prompt("Escribe el valor del segundo termino"));
+
+                //Calculos matemáticos
+                switch(opcion){
+                    case "1":
+                        operacion = num1 + num2;
+                        document.write("Resultado de la suma de " + num1 + " y " + num2 
+                            + " es: " + operacion.toFixed(2) + '</br>');
+                    break
+                
+                    case "2":
+                        operacion = num1 - num2;
+                        document.write("Resultado de la resta de " + num1 + " y " + num2 
+                            + " es: " + operacion.toFixed(2) + '</br>');
+                    break
+
+                    case "3":
+                        operacion = num1 * num2;
+                        document.write("Resultado de la multiplicación de " + num1 + " y " + num2 
+                            + " es: " + operacion.toFixed(2) + '</br>');
+                    break
+
+                    case "4":
+                        operacion = num1 / num2;
+                        document.write("Resultado de la división de " + num1 + " y " + num2 
+                            + " es: " + operacion.toFixed(2) + '</br>');
+                    break
+
+                    default:
+                        break;
+                }
+        
+                document.write("-----------------------------------------------------------" + '</br>');
+                
+                //Proceso para saber si desea hacer otra operación
+                repetir = prompt("¿Deseas hacer otra operación? (Escribe el número) \n 1. Si \n 2. No");
+                if(repetir == 1){
+                    ciclo = true;
+                }else if(repetir == 2){
+                    ciclo = false;
+                }else{
+                    let ciclo2 = true;
+                    while(ciclo2 == true){
+                        repetir = prompt("¿Deseas hacer otra operación? \n 1. Si \n 2. No");
+                        if(repetir == 1 || repetir == 2){
+                            ciclo2 = false;
+                        }else{
+                            ciclo2 = true;
+                        }
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>

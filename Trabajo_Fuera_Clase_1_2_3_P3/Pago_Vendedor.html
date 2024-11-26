@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <title>Pago Vendedor</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+            
+            //Variables
+            let nombres;
+            let ap_Paterno;
+            let ap_Materno;
+            let sueldo_Base;
+            let numero_Ventas;
+            let monto_Venta;
+            let comision;
+            let total_Pagar = 0;
+            let j = 1;
+
+            //Solicitamos Datos
+            nombres = prompt("Escribe tu nombre o nombres");
+            ap_Paterno = prompt("Escribe tu apellido paterno");
+            ap_Materno = prompt("Escribe tu apellido materno");
+            sueldo_Base = parseFloat(prompt("Escribe tu sueldo base (1230.50)"));
+            numero_Ventas = parseInt(prompt("Escribe el número de ventas"));
+
+            //Mostramos salida
+            document.write("Tu nombre completo es: " + nombres.toUpperCase() + " " + ap_Paterno.toUpperCase() + 
+                " " + ap_Materno.toUpperCase() + '</br>');
+            document.write("Sueldo base: $" + sueldo_Base + '</br>');
+            document.write("Número de ventas: " + numero_Ventas + '</br>');
+
+            //Calculamos el total a pagar
+            for(let i = 0; i < numero_Ventas; i++){
+                monto_Venta = parseFloat(prompt("Escribe el monto de la venta"));
+                document.write("Monto de la venta " + j + ": $" + monto_Venta + '</br>');
+                if(monto_Venta >= 2000.00){
+                    comision = (monto_Venta*0.20);
+                    total_Pagar = total_Pagar + comision;
+                }else{
+                    comision = (monto_Venta*0.10);
+                    total_Pagar = total_Pagar + comision;
+                }
+                j += 1;
+            }
+            
+            total_Pagar = total_Pagar + sueldo_Base;
+
+            document.write("Total a pagar: $" + total_Pagar.toFixed(2));
+
+        </script>
+    </body>
+</html>

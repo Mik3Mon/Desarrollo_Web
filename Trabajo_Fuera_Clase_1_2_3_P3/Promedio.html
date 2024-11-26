@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>Pago Vendedor</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+            
+            //Variables
+            let nombres;
+            let ap_Paterno;
+            let ap_Materno;
+            let numero_Calificaciones;
+            let calificacion_Materia;
+            let suma = 0;
+            let promedio = 0;
+            let j = 1;
+
+            //Solicitamos Datos
+            nombres = prompt("Escribe tu nombre o nombres");
+            ap_Paterno = prompt("Escribe tu apellido paterno");
+            ap_Materno = prompt("Escribe tu apellido materno");
+            numero_Calificaciones = parseInt(prompt("Escribe el numero de calificaciones"))
+            
+            //Mostramos salida
+            document.write("Tu nombre completo es: " + nombres.toUpperCase() + " " + ap_Paterno.toUpperCase() + 
+                " " + ap_Materno.toUpperCase() + '</br>');
+            document.write("Numero de materias promediadas: " + numero_Calificaciones + '</br>');
+
+            //Calculamos el promedio
+            for(let i = 0; i < numero_Calificaciones; i++){
+                calificacion_Materia = parseFloat(prompt("Escribe la calificacion de la materia (9.56)"));
+                document.write("Calificación " + j + ": " + calificacion_Materia + '</br>');
+                suma = suma + calificacion_Materia;
+                j += 1;
+            }
+            
+            promedio = (suma/numero_Calificaciones);
+
+            document.write("Promedio final: " + promedio.toFixed(2) + '</br>');
+            if(promedio <= 5){
+                document.write("Reprobado");
+            }else if(promedio == 6 || promedio == 7){
+                document.write("Aprobado, pero deberias esforzarte más");
+            }else if(promedio >= 8 && promedio <= 10){
+                document.write("Aprobado, excelente esfuerzo");
+            }
+
+        </script>
+    </body>
+</html>

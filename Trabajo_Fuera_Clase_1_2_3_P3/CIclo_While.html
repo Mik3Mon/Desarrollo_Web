@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>Convertidor de Unidades</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+            
+            //Variable de control del ciclo
+            let ciclo = true;
+            let contador = 0;
+
+            //Ciclo while
+            while(ciclo == true){
+                let repetir = prompt("Escriba cualquier cosa, si quiere terminar escriba 0");
+
+                //Validacion si se repite el ciclo
+                if(repetir == "0"){
+                    ciclo = false;
+                }else{
+                    ciclo = true;
+                    contador += 1;
+                }
+            }
+            document.write("Numero de veces que se repitio el ciclo while antes de ingresar el numero 0: " 
+                + contador + " veces");
+            
+        </script>
+    </body>
+</html>

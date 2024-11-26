@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>Indice de Masa Corporal</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+            
+            //Variables
+            let nombres;
+            let ap_Paterno;
+            let ap_Materno;
+            let edad;
+            let peso;
+            let altura;
+            let IMC;
+            let mensaje_Salud
+
+            //Solicitamos Datos
+            nombres = prompt("Escribe tu nombre o nombres");
+            ap_Paterno = prompt("Escribe tu apellido paterno");
+            ap_Materno = prompt("Escribe tu apellido materno");
+            edad = prompt("Escribe tu edad");
+            peso = parseInt(prompt("Escribe tu peso en kg (70kg)"));
+            altura = parseFloat(prompt("Escribe tu altura en m (1.70m)"));
+            
+            //Calculamos IMC
+            IMC = peso/(Math.pow(altura,2));
+
+            //Mensaje de salud
+            if(IMC >= 22 && IMC <=25){
+                mensaje_Salud = "Su peso se encuentra en un rango adecuado a su peso y altura";
+            }else if(IMC > 25){
+                mensaje_Salud = "Su peso se encuentra arriba del promedio, deberia visitar a un nutriologo";
+            }else if(IMC < 22){
+                mensaje_Salud = "Su peso se encuentra debajo del promedio, deberia visitar a un nutriologo";
+            }
+
+            //Mostramos salida
+            document.write("Tu nombre completo es: " + nombres.toUpperCase() + 
+                " " + ap_Paterno.toUpperCase() + " " + ap_Materno.toUpperCase() + '</br>');
+            document.write("Tu edad es: " + edad + " años" + '</br>');
+            document.write("IMC: " + IMC.toFixed(2) + '</br>');
+            document.write(mensaje_Salud);
+
+        </script>
+    </body>
+</html>
